@@ -1,0 +1,6 @@
+<h1>Chocolates</h1>
+<ul>
+    {% for chocolate in chocolates %}
+    <li><a href="{% url 'chocolate_detail' chocolate.pk %}">{{ chocolate.name }}</a></li>
+    {% endfor %}
+</ul>

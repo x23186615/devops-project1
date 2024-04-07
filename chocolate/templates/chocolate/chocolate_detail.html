@@ -1,0 +1,16 @@
+<h1>{{ chocolate.name }}</h1>
+<p>{{ chocolate.description }}</p>
+
+<h2>Ingredients</h2>
+<ul>
+    {% for ingredient in chocolate.ingredient_set.all %}
+    <li>{{ ingredient.name }} - {{ ingredient.quantity }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Steps</h2>
+<ul>
+    {% for step in chocolate.step_set.all %}
+    <li>{{ step.description }}</li>
+    {% endfor %}
+</ul>
